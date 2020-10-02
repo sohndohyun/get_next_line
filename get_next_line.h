@@ -6,16 +6,16 @@
 /*   By: dsohn <dsohn@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 15:22:47 by dsohn             #+#    #+#             */
-/*   Updated: 2020/10/02 15:34:14 by dsohn            ###   ########.fr       */
+/*   Updated: 2020/10/02 16:35:03 by dsohn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 5000
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5000
+# endif
 
 # include <stdlib.h>
 # include <unistd.h>

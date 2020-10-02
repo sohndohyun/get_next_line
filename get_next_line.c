@@ -6,7 +6,7 @@
 /*   By: dsohn <dsohn@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 15:22:21 by dsohn             #+#    #+#             */
-/*   Updated: 2020/10/02 15:40:07 by dsohn            ###   ########.fr       */
+/*   Updated: 2020/10/02 16:35:24 by dsohn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	isline(char *str)
 		if (*str == '\n')
 			return (str - temp);
 		str++;
-	}		
+	}
 	return (-1);
 }
 
@@ -59,13 +59,13 @@ static int	return_left(int rlen, char **buf, char **line)
 		return (-1);
 	if ((len = isline(*buf)) >= 0)
 		return (get_line(buf, len, line));
-	else if(*buf)
+	else if (*buf)
 	{
 		*line = *buf;
 		*buf = NULL;
 		return (0);
 	}
-	if(!(*line = (char*)malloc(sizeof(char))))
+	if (!(*line = (char*)malloc(sizeof(char))))
 		return (-1);
 	(*line)[0] = 0;
 	return (0);
@@ -84,7 +84,7 @@ int			get_next_line(int fd, char **line)
 		buf[rlen] = 0;
 		save[fd] = gnl_join(save[fd], buf);
 		if ((rlen = isline(save[fd])) >= 0)
-			return get_line(&save[fd], rlen, line);
+			return (get_line(&save[fd], rlen, line));
 	}
 	return (return_left(rlen, &save[fd], line));
 }
